@@ -28,14 +28,18 @@ public class Promocao {
 		Item temp = null;
 		for (Map.Entry<String, Integer> item : compra.getMapa().entrySet()) {
 			if (item.getValue() >= 20){
-				for (Item item2 : compra.getListaDeItens()){
-					if (item2.getNome() == item.getKey()){
-						temp = item2;
+				
+				for (Item itemDaCompra : compra.getListaDeItens()){
+					if (itemDaCompra.getNome() == item.getKey()){
+						temp = itemDaCompra;
 						break;
 					}
 				}
-				double desconto = (item.getValue() * temp.getValor()) * 0.1;
-				compra.addDescontos(desconto);
+				
+				if(temp != null){
+					double desconto = (item.getValue() * temp.getValor()) * 0.1;
+					compra.addDescontos(desconto);	
+				}
 			}
 		}
 	}
