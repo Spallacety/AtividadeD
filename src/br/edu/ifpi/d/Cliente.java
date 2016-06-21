@@ -20,7 +20,9 @@ public class Cliente {
 	public int getPontos() {
 		return pontos;
 	}
-	
+	public void setPontos(int pontos){
+		this.pontos=pontos;
+	}
 	public void addPontos(int pontos) {
 		this.pontos += pontos;
 	}

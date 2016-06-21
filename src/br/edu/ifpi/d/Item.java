@@ -1,7 +1,8 @@
 package br.edu.ifpi.d;
 
 public class Item {
-
+	
+	private String cod;
 	private double valor;
 	private String nome;
 	
@@ -24,6 +25,14 @@ public class Item {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getCod() {
+		return cod;
+	}
+	
+	public void setCod(String cod) {
+		this.cod = cod;
 	}
 	
 }
